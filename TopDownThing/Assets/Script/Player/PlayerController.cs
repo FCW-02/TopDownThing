@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void GatherInput()
     {
-        input = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"));
+        input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
     }
 
     void Look()
