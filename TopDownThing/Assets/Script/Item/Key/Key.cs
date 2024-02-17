@@ -12,6 +12,17 @@ public class Key : MonoBehaviour
         {
             inventory.ItemCollect();
             gameObject.SetActive(false);
+
+            // Notify the door that a key has been collected
+            GameObject doorObject = GameObject.FindGameObjectWithTag("Door");
+            if (doorObject != null)
+            {
+                Door door = doorObject.GetComponent<Door>();
+                if (door != null)
+                {
+                    door.KeyCollected();
+                }
+            }
         }
     }
 }
