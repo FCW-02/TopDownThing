@@ -9,10 +9,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnspeed = 360;
     private Vector3 input;
 
+    // Animator reference
+    private Animator animator;
+
+    void Start()
+    {
+        // Get the Animator component attached to the player
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         GatherInput();
         Look();
+        UpdateAnimationBooleans();
     }
 
     void FixedUpdate()
@@ -43,5 +53,15 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.deltaTime);
+    }
+
+    // Update boolean values based on input for animation
+    void UpdateAnimationBooleans()
+    {
+        // Set animator parameters based on input
+        animator.SetBool("L", Input.GetKey(KeyCode.A));
+        animator.SetBool("R", Input.GetKey(KeyCode.D));
+        animator.SetBool("C", Input.GetKey(KeyCode.W));
+        animator.SetBool("D", Input.GetKey(KeyCode.S));
     }
 }
