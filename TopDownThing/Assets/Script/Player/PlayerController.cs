@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnspeed = 360;
     private Vector3 input;
 
+    private bool isDead;
+
+    public GameManage gameManage;
+
     // Animator reference
     private Animator animator;
 
@@ -55,13 +59,21 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.deltaTime);
     }
 
-    // Update boolean values based on input for animation
     void UpdateAnimationBooleans()
     {
-        // Set animator parameters based on input
         animator.SetBool("L", Input.GetKey(KeyCode.A));
         animator.SetBool("R", Input.GetKey(KeyCode.D));
         animator.SetBool("C", Input.GetKey(KeyCode.W));
         animator.SetBool("D", Input.GetKey(KeyCode.S));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Trap") && !isDead)
+        {
+            Destroy(gameObject);
+            isDead = true;
+            gameManage.gameOver();
+        }
     }
 }
