@@ -6,10 +6,12 @@ public class Flashlight : MonoBehaviour
 {
     public KeyCode toggleKey = KeyCode.F;
     public GameObject flashlightObject;
+    public GameObject lampObject;
 
     void Start()
     {
         flashlightObject.SetActive(false);
+        lampObject.SetActive(false);
     }
 
     void Update()
@@ -17,6 +19,7 @@ public class Flashlight : MonoBehaviour
         if (Input.GetKeyDown(toggleKey))
         {
             flashlightObject.SetActive(!flashlightObject.activeSelf);
+            lampObject.SetActive(!lampObject.activeSelf);
         }
     }
 }
