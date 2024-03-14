@@ -126,7 +126,7 @@ MonoBehaviour:
   firePoint: {fileID: 5085799158005334706}
   fireRate: 1
   arrowSpeed: 10
-  attackRange: 15
+  attackRange: 5
 --- !u!1 &4795116630667794518
 GameObject:
   m_ObjectHideFlags: 0
