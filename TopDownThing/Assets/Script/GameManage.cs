@@ -42,4 +42,9 @@ public class GameManage : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
