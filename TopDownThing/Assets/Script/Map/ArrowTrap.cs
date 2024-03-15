@@ -10,6 +10,8 @@ public class ArrowTrap : MonoBehaviour
     public float arrowSpeed = 10f; // Speed of the arrow
     public float attackRange = 5f; // Range at which the trap will start firing
 
+    public AudioSource shootSound; // Sound to play when shooting arrow
+
     private float nextFireTime;
 
     void Update()
@@ -35,11 +37,16 @@ public class ArrowTrap : MonoBehaviour
         }
     }
 
-
     void FireArrow()
     {
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
         Rigidbody arrowRB = arrow.GetComponent<Rigidbody>();
         arrowRB.velocity = firePoint.forward * arrowSpeed;
+
+        // Play the shoot sound
+        if (shootSound != null)
+        {
+            shootSound.Play();
+        }
     }
 }
