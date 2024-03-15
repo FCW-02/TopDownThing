@@ -20,13 +20,10 @@ public class Door : MonoBehaviour
 
     void Interact()
     {
-        // Check if the player has collected enough keys
         if (keysCollected >= keysRequired)
         {
-            // Check if the door object exists and is active in the scene
             if (doorObject != null && doorObject.activeSelf)
             {
-                // Deactivate the door object
                 doorObject.SetActive(false);
             }
         }

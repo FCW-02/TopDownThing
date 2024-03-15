@@ -31,16 +31,15 @@ public class AnimationCha : MonoBehaviour
 
     void PlayWalkSound()
     {
-        // Check for each movement key
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) ||
             Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
-            walkSound.Play(); // Play the walk sound when any movement key is pressed down
+            walkSound.Play();
         }
         else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) ||
                  Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
-            walkSound.Stop(); // Stop the walk sound when any movement key is released
+            walkSound.Stop();
         }
     }
 }
