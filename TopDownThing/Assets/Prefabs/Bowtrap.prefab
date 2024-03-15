@@ -126,8 +126,8 @@ MonoBehaviour:
   arrowPrefab: {fileID: 4539640530108609877, guid: 0de3f074aabe2e345be7b937b6283746, type: 3}
   firePoint: {fileID: 5085799158005334706}
   fireRate: 1
-  arrowSpeed: 10
-  attackRange: 5
+  arrowSpeed: 8
+  attackRange: 10
   shootSound: {fileID: 7919126314782558548}
 --- !u!82 &7919126314782558548
 AudioSource:
