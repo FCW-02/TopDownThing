@@ -1967,7 +1967,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8b0f8caf733f2e4b96b5262a526c134, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2775,9 +2775,10 @@ GameObject:
   - component: {fileID: 1049628940}
   - component: {fileID: 1049628939}
   - component: {fileID: 1049628938}
+  - component: {fileID: 1049628942}
   m_Layer: 0
   m_Name: Win
-  m_TagString: End
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2870,6 +2871,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1049628942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049628937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0414fe83a694f76498d9b32d9b585757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1073919833
 GameObject:
   m_ObjectHideFlags: 0
