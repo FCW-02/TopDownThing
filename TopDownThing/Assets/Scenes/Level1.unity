@@ -3108,6 +3108,7 @@ MonoBehaviour:
   mainCamera: {fileID: 963194227}
   cutsceneCamera: {fileID: 513980320}
   player: {fileID: 1009245869}
+  uiCanvas: {fileID: 1093684348}
   cutsceneDuration: 6
 --- !u!4 &880513326
 Transform:
